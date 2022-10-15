@@ -1,10 +1,12 @@
 import React from 'react';
 import {NativeBaseProvider} from 'native-base';
-import First from './screens/First';
+import First from './screens/Splash';
+import ButtonCmp from './Components/ButtonCmp';
 const App = () => {
   return (
     <NativeBaseProvider>
       <First />
+      {/* <ButtonCmp /> */}
     </NativeBaseProvider>
   );
 };
