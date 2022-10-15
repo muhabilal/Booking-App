@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button} from 'native-base';
-const Button = () => {
+const button = () => {
   return (
     <>
       <Button>Click me</Button>
@@ -8,4 +8,4 @@ const Button = () => {
   );
 };
 
-export default Button;
+export default button;
