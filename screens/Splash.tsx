@@ -24,7 +24,7 @@ const First = () => {
         <Stack mt={12}>
           <VStack space={3} justifyContent="center" alignItems="center">
             <ButtonCmp btnText="Create Account" />
-            <ButtonCmp btnText="Create Account" />
+            <ButtonCmp btnText="Login" />
           </VStack>
         </Stack>
         <VStack mt={2} alignItems="center" justifyContent="center">
