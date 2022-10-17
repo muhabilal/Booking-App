@@ -1,11 +1,20 @@
 import React from 'react';
-import {Center, Text, Heading, ScrollView, Stack, VStack} from 'native-base';
+import {
+  Center,
+  Text,
+  Heading,
+  ScrollView,
+  Stack,
+  VStack,
+  Box,
+} from 'native-base';
 import {Image} from 'native-base';
 import ButtonCmp from '../Components/ButtonCmp';
 const First = () => {
   return (
-    <ScrollView>
-      <Stack bg={'white'}>
+    <Box flex={'1'} bg={'white'}>
+      <Stack mb={20}>
+        {/* <ScrollView> */}
         <Stack mt={20}>
           <Center>
             <Image
@@ -23,11 +32,19 @@ const First = () => {
         </Stack>
         <Stack mt={12}>
           <VStack space={3} justifyContent="center" alignItems="center">
-            <ButtonCmp btnText="Create Account" />
-            <ButtonCmp btnText="Login" />
+            <ButtonCmp
+              btnText="Create Account"
+              color_txt="#10B981"
+              background={'#32B768'}
+            />
+            <ButtonCmp
+              btnText="Login"
+              background={'#D1FAE5'}
+              color_txt="white"
+            />
           </VStack>
         </Stack>
-        <VStack mt={2} alignItems="center" justifyContent="center">
+        <VStack mt={2} mb={10} alignItems="center" justifyContent="center">
           <Text fontSize="xs">
             By logging in or registering,you have agreed to the
             <Text color={'#32B768'}>Terms and</Text>
@@ -37,8 +54,9 @@ const First = () => {
             <Text color={'#32B768'}>Privacy Policy.</Text>
           </Text>
         </VStack>
+        {/* </ScrollView> */}
       </Stack>
-    </ScrollView>
+    </Box>
   );
 };
 

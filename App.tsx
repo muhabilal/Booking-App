@@ -7,10 +7,10 @@ import Register from './screens/Register';
 const App = () => {
   return (
     <NativeBaseProvider>
-      {/* <First /> */}
+      <First />
       {/* <ButtonCmp /> */}
       {/* <InputsCmp /> */}
-      <Register />
+      {/* <Register /> */}
     </NativeBaseProvider>
   );
 };
