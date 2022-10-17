@@ -1,4 +1,4 @@
-import {Input, ScrollView, Stack, Text} from 'native-base';
+import {Input, Stack, Text} from 'native-base';
 import React from 'react';
 
 const InputsCmp = (props: any) => {
@@ -8,20 +8,18 @@ const InputsCmp = (props: any) => {
   const Value = props.inputValue;
   const setValue = props.setInputValue;
   return (
-    <ScrollView>
-      <Stack>
-        <Text>{Name}</Text>
-        <Input
-          size="md"
-          placeholder={P_holder}
-          w="75%"
-          borderRadius={10}
-          type={secure}
-          value={Value}
-          onChangeText={setValue}
-        />
-      </Stack>
-    </ScrollView>
+    <Stack mx={10}>
+      <Text ml={2}>Name</Text>
+      <Input
+        h={'10'}
+        w={'100%'}
+        placeholder={P_holder}
+        borderRadius={10}
+        type={secure}
+        value={Value}
+        onChangeText={setValue}
+      />
+    </Stack>
   );
 };
 

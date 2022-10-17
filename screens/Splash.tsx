@@ -8,6 +8,8 @@ import {
   VStack,
   Box,
   Flex,
+  Row,
+  Column,
 } from 'native-base';
 import {Image} from 'native-base';
 import ButtonCmp from '../Components/ButtonCmp';
@@ -25,11 +27,11 @@ const First = () => {
           </Center>
         </Stack>
         <Stack mt={20}>
-          <VStack alignItems="center" justifyContent="center">
+          <Column alignItems="center" justifyContent="center">
             <Heading size="2xl">Welcome</Heading>
             <Text mt={4}>Before enjoying Foodmedia services</Text>
             <Text>Please register first</Text>
-          </VStack>
+          </Column>
         </Stack>
         <Stack mt={12}>
           <VStack space={3} justifyContent="center" alignItems="center">
