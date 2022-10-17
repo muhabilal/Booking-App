@@ -1,12 +1,21 @@
 import React from 'react';
-import {Box, Pressable, Button} from 'native-base';
+import {Button, extendTheme, NativeBaseProvider} from 'native-base';
 const ButtonCmp = (props: any) => {
   const text = props.btnText;
-
+  const theme = extendTheme({
+    colors: {
+      primary: {
+        200: '#32B768',
+        _text: {
+          color: '#FFFFFF',
+        },
+      },
+    },
+  });
   return (
-    <Button bg={'#32B768'} isHovered={false} w={246}>
-      {text}
-    </Button>
+    <NativeBaseProvider theme={theme}>
+      <Button bg={'green.400'}>{text}</Button>
+    </NativeBaseProvider>
   );
   // <Button bg={'green.400'}>{text}</Button>;
 };
