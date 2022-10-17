@@ -4,13 +4,15 @@ import First from './screens/Splash';
 import ButtonCmp from './Components/ButtonCmp';
 import InputsCmp from './Components/InputsCmp';
 import Register from './screens/Register';
+import Press from './Components/Press';
 const App = () => {
   return (
     <NativeBaseProvider>
-      <First />
+      {/* <First /> */}
       {/* <ButtonCmp /> */}
       {/* <InputsCmp /> */}
-      {/* <Register /> */}
+      <Register />
+      {/* <Press /> */}
     </NativeBaseProvider>
   );
 };
