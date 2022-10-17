@@ -1,23 +1,17 @@
 import React from 'react';
-import {Button, extendTheme, NativeBaseProvider} from 'native-base';
+import {Button} from 'native-base';
 const ButtonCmp = (props: any) => {
   const text = props.btnText;
-  const theme = extendTheme({
-    colors: {
-      primary: {
-        200: '#32B768',
-        _text: {
-          color: '#FFFFFF',
-        },
-      },
-    },
-  });
+  const bg_color = props.background;
   return (
-    <NativeBaseProvider theme={theme}>
-      <Button bg={'green.400'}>{text}</Button>
-    </NativeBaseProvider>
+    <Button
+      w={256}
+      h={49}
+      bg={bg_color}
+      _text={{color: bg_color == '#32B768' ? 'white' : '#10B981'}}>
+      {text}
+    </Button>
   );
-  // <Button bg={'green.400'}>{text}</Button>;
 };
 
 export default ButtonCmp;
