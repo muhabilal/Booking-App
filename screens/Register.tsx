@@ -1,11 +1,4 @@
-import {
-  NativeBaseProvider,
-  Stack,
-  Center,
-  Image,
-  HStack,
-  Row,
-} from 'native-base';
+import {Stack, Center, Image, Row, NativeBaseProvider} from 'native-base';
 import React, {useState} from 'react';
 import InputsCmp from '../Components/InputsCmp';
 import Press from '../Components/Press';
@@ -31,9 +24,6 @@ const Register = () => {
         </Stack>
       </Stack>
     </NativeBaseProvider>
-    // <Stack justifyContent="center" alignItems="center">
-    //   <InputsCmp name="Fullname" Placeholder="Enter name" />
-    // </Stack>
   );
 };
 

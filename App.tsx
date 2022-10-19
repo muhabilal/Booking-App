@@ -1,26 +1,19 @@
 import React from 'react';
-import {NativeBaseProvider} from 'native-base';
 import First from './screens/Splash';
 import ButtonCmp from './Components/ButtonCmp';
 import InputsCmp from './Components/InputsCmp';
 import Register from './screens/Register';
-<<<<<<< HEAD
 import Home from './screens/Home';
-=======
 import Press from './Components/Press';
->>>>>>> 53851b0da8b2f393bb3e65c7429099a304d368cc
+import {NativeBaseProvider} from 'native-base';
 const App = () => {
-
   return (
     <NativeBaseProvider>
-<<<<<<< HEAD
-      <Home/>
-=======
->>>>>>> 53851b0da8b2f393bb3e65c7429099a304d368cc
-      {/* <First /> */}
+      {/* <Home/> */}
+      <First />
       {/* <ButtonCmp /> */}
       {/* <InputsCmp /> */}
-      <Register />
+      {/* <Register /> */}
       {/* <Press /> */}
     </NativeBaseProvider>
   );
