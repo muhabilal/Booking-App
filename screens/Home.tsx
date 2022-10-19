@@ -1,148 +1,113 @@
 import React from 'react';
-import {
-  Text,
-  HStack,
-  Image,
-  Stack,
-  Center,
-  Box,
-  Row,
-  ScrollView,
-  VStack,
-  Column,
-} from 'native-base';
+import {Text, Button, Image, Stack, Row, ScrollView, Column} from 'native-base';
 import HomeInput from '../Components/HomeInput';
+import Images from '../Components/Images';
+import Todays from '../Components/Todays';
+import HomePress from '../Components/HomePress';
 const Home = () => {
+  const IMAGES = [
+    {imgelink: require('../assests/banner.png')},
+    {imgelink: require('../assests/banner.png')},
+    {imgelink: require('../assests/banner.png')},
+    {imgelink: require('../assests/banner.png')},
+  ];
+  const TODAYSIMAGE = [
+    {
+      today: require('../assests/chicken.png'),
+      name: 'Cicken Biryane',
+      location: require('../assests/location.webp'),
+      hottel: ' Ambrosia Hotel & Resturant',
+    },
+    {
+      today: require('../assests/rice.png'),
+      name: 'Cicken Biryane',
+      location: require('../assests/location.webp'),
+      hottel: ' Ambrosia Hotel & Resturant',
+    },
+    {
+      today: require('../assests/chicken.png'),
+      name: 'Cicken Biryane',
+      location: require('../assests/location.webp'),
+      hottel: ' Ambrosia Hotel & Resturant',
+    },
+  ];
+
+  const NEWARIVAL = [
+    {
+      today: require('../assests/end.png'),
+      name: 'Cicken Biryane',
+      location: require('../assests/location.webp'),
+      hottel: ' Ambrosia Hotel & Resturant',
+    },
+    {
+      today: require('../assests/end.png'),
+      name: 'Cicken Biryane',
+      location: require('../assests/location.webp'),
+      hottel: ' Ambrosia Hotel & Resturant',
+    },
+    {
+      today: require('../assests/end.png'),
+      name: 'Cicken Biryane',
+      location: require('../assests/location.webp'),
+      hottel: ' Ambrosia Hotel & Resturant',
+    },
+  ];
+
   return (
     <ScrollView>
-      <Stack flex={1}>
-        <HStack
-          m={2}
-          h={10}
-          justifyContent={'space-between'}
-          alignItems={'center'}>
-          <Image
-            position={'absolute'}
-            left={0}
-            resizeMode="cover"
-            source={require('../assests/dash.png')}
-            alt="Dash Board Image"
+      <Stack flex="1" justifyContent={'space-between'} m={3}>
+        <Row h={10} justifyContent={'space-between'} alignItems={'center'}>
+          <HomePress token={require('../assests/dash.png')} />
+
+          <HomePress
+            token={require('../assests/location.webp')}
+            wriiten=" Agerabad 435, Chittagong"
           />
-          <Center>
-            <Text>
-              <Image
-                borderRadius={20}
-                size={5}
-                resizeMode="cover"
-                source={require('../assests/location.webp')}
-                alt="Dash Board Image"
-              />
-              Agerabad 435, Chittagong
-            </Text>
-          </Center>
-          <Box>
-            <Image resizeMode="cover" source={require('../assests/logo.png')} />
-          </Box>
-        </HStack>
+          <HomePress token={require('../assests/logo.png')} />
+        </Row>
         <HomeInput />
-        <Row h={140} m={1}>
-          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-            <Image source={require('../assests/banner.png')} />
-            <Image source={require('../assests/banner.png')} />
-          </ScrollView>
-        </Row>
-        <Row justifyContent={'space-between'} my={5}>
-          <Column>
-            <Text style={{fontWeight: 'bold'}}>Todays New Arivable</Text>
-            <Text>Best Of the today Food list Update</Text>
-          </Column>
-          <Text top={1}>
-            See All <Image source={require('../assests/next.png')} />
-          </Text>
-        </Row>
-        <Row h={170} m={1} alignItems={'center'}>
-          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-            <Column bg={'white'}>
-              <Image
-                borderTopRadius={10}
-                source={require('../assests/chicken.png')}
-              />
-              <Text fontWeight={'bold'}>Cicken Biryane</Text>
-              <Text w={120}>
-                <Image
-                  borderRadius={20}
-                  size={5}
-                  resizeMode="cover"
-                  source={require('../assests/location.webp')}
-                  alt="Dash Board Image"
-                />
-                Ambrosia Hotel & Resturant
-              </Text>
-            </Column>
-            <Column bg={'white'} ml={1}>
-              <Image
-                borderTopRadius={10}
-                source={require('../assests/rice.png')}
-              />
-              <Text fontWeight={'bold'}>Sauce Tonkatsu</Text>
-              <Text w={120}>
-                <Image
-                  borderRadius={20}
-                  size={5}
-                  resizeMode="cover"
-                  source={require('../assests/location.webp')}
-                  alt="Dash Board Image"
-                />
-                Ambrosia Hotel & Resturant
-              </Text>
-            </Column>
-            <Column bg={'white'} ml={1}>
-              <Image
-                borderTopRadius={10}
-                source={require('../assests/chicken.png')}
-              />
-              <Text fontWeight={'bold'}>Cicken Biryane</Text>
-              <Text w={120}>
-                <Image
-                  borderRadius={20}
-                  size={5}
-                  resizeMode="cover"
-                  source={require('../assests/location.webp')}
-                  alt="Dash Board Image"
-                />
-                Ambrosia Hotel & Resturant
-              </Text>
-            </Column>
-          </ScrollView>
-        </Row>
-        <Row justifyContent={'space-between'} my={5}>
-          <Column>
-            <Text style={{fontWeight: 'bold'}}>Todays New Arivable</Text>
-            <Text>Best Of the today Food list Update</Text>
-          </Column>
-          <Text top={1}>
-            See All <Image source={require('../assests/next.png')} />
-          </Text>
-        </Row>
-        <Row bg={'white'} ml={1}>
-          <Image borderTopRadius={10} source={require('../assests/end.png')} />
-          <Column>
-            <Text fontWeight={'bold'} fontSize="lg">
-              {' '}
-              Booking Restaurant
-            </Text>
-            <Text w={120}>
-              <Image
-                borderRadius={20}
-                size={5}
-                resizeMode="cover"
-                source={require('../assests/location.webp')}
-                alt="Dash Board Image"
-              />
-              Kazi deiry,Taiger Pass Chittagong
-            </Text>
-          </Column>
-        </Row>
+        <Images imgurl={IMAGES} />
+
+        <HomePress
+          newse="Todays New Arivable"
+          foodlist="Best Of the today Food list Update"
+          seeall=" See All "
+          token={require('../assests/next.png')}
+        />
+        <Todays todayimages={TODAYSIMAGE} />
+
+        <HomePress
+          newse="Todays New Arivable"
+          foodlist="Best Of the today Food list Update"
+          seeall=" See All "
+          token={require('../assests/next.png')}
+        />
+
+        <ScrollView showsHorizontalScrollIndicator={false}>
+          {NEWARIVAL.map(item => {
+            return (
+              <Row justifyContent={'space-between'} bg={'white'} padding={1}>
+                <Image borderTopRadius={10} source={item.today} />
+                <Column>
+                  <Text fontWeight={'bold'}>{item.name}</Text>
+                  <Text w={120}>
+                    <Image
+                      borderRadius={20}
+                      size={5}
+                      resizeMode="cover"
+                      source={item.location}
+                      alt="Dash Board Image"
+                    />
+                    {item.hottel}
+                  </Text>
+                </Column>
+                <Button w={20} h={10} mt={6}>
+                  BOOK
+                </Button>
+              </Row>
+            );
+          })}
+        </ScrollView>
       </Stack>
     </ScrollView>
   );

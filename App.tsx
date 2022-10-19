@@ -9,8 +9,8 @@ import {NativeBaseProvider} from 'native-base';
 const App = () => {
   return (
     <NativeBaseProvider>
-      {/* <Home/> */}
-      <First />
+      <Home />
+      {/* <First /> */}
       {/* <ButtonCmp /> */}
       {/* <InputsCmp /> */}
       {/* <Register /> */}
