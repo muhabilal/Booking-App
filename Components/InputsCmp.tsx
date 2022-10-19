@@ -9,7 +9,7 @@ const InputsCmp = (props: any) => {
   const setValue = props.setInputValue;
   return (
     <Stack mx={10}>
-      <Text ml={2}>Name</Text>
+      <Text ml={2}>{Name}</Text>
       <Input
         h={'10'}
         w={'100%'}

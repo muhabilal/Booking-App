@@ -4,8 +4,15 @@ import {Button} from 'native-base';
 
 const Press = (props: any) => {
   const text = props.txt;
+  const PaddingLeft = props.padding_left;
+  const PaddingRight = props.padding_right;
   return (
-    <Button size="sm" variant="link" _text={{color: '#32B768'}}>
+    <Button
+      pl={PaddingLeft}
+      pr={PaddingRight}
+      size="lg"
+      variant="link"
+      _text={{color: 'primary'}}>
       {text}
     </Button>
   );

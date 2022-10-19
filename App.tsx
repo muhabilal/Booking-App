@@ -5,16 +5,16 @@ import InputsCmp from './Components/InputsCmp';
 import Register from './screens/Register';
 import Home from './screens/Home';
 import Press from './Components/Press';
-import {NativeBaseProvider} from 'native-base';
+import {NativeBaseProvider, Stack} from 'native-base';
+import Theme from './Themes/Theme';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Index from './Index';
 const App = () => {
+  const Stack = createNativeStackNavigator();
   return (
-    <NativeBaseProvider>
-      <Home />
-      {/* <First /> */}
-      {/* <ButtonCmp /> */}
-      {/* <InputsCmp /> */}
-      {/* <Register /> */}
-      {/* <Press /> */}
+    <NativeBaseProvider theme={Theme}>
+      <Index />
     </NativeBaseProvider>
   );
 };
