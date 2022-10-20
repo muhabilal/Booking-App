@@ -2,8 +2,10 @@ import React from 'react';
 import {NativeBaseProvider, Stack} from 'native-base';
 import Theme from './Themes/Theme';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {NavigationContainer} from '@react-navigation/native';
 import Booking from './screens/Booking';
 import Index from './Index';
+import Home from './screens/Home';
 import Details from './screens/Details';
 const App = () => {
   const Stack = createNativeStackNavigator();
