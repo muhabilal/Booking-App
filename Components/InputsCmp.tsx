@@ -8,8 +8,10 @@ const InputsCmp = (props: any) => {
   const Value = props.inputValue;
   const setValue = props.setInputValue;
   return (
-    <Stack mx={10}>
-      <Text ml={2}>{Name}</Text>
+    <Stack>
+      <Text mb={2} fontWeight={'bold'} ml={2}>
+        {Name}
+      </Text>
       <Input
         h={'10'}
         w={'100%'}

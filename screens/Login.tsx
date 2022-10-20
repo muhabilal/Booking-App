@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import InputsCmp from '../Components/InputsCmp';
-import {Stack} from 'native-base';
+import {Stack, Row, VStack, Divider} from 'native-base';
 import Press from '../Components/Press';
-const Login = () => {
+import ButtonCmp from '../Components/ButtonCmp';
+const Login = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   return (
@@ -21,7 +22,19 @@ const Login = () => {
           setInputValue={setPassword}
         />
       </Stack>
-      <Press txt="Forget Password?" />
+      <Row justifyContent={'flex-end'}>
+        <Press
+          txt="Forget Password?"
+          click={() => {
+            navigation.navigate('ForgetPassword');
+          }}
+        />
+      </Row>
+      <VStack mt={7} space={3} alignItems="center">
+        <ButtonCmp btnText="Login" background="light.100" />
+        <Divider w={'40%'} />
+        <ButtonCmp btnText="Sign Up with Google" background="light.100" />
+      </VStack>
     </Stack>
   );
 };

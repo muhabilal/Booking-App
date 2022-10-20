@@ -1,5 +1,4 @@
 import React from 'react';
-import Register from './Register';
 import {
   Center,
   Text,
@@ -9,9 +8,10 @@ import {
   Box,
   Column,
   Image,
+  Pressable,
 } from 'native-base';
 import ButtonCmp from '../Components/ButtonCmp';
-const First = () => {
+const First = ({navigation}) => {
   return (
     <Box flex="1" bg={'singletons'}>
       <Stack h={350}>
@@ -32,9 +32,13 @@ const First = () => {
             <ButtonCmp
               btnText="Create Account"
               background={'primary'}
-              click="Register"
+              press={() => navigation.navigate('Register')}
             />
-            <ButtonCmp btnText="Login" background={'secondary'} />
+            <ButtonCmp
+              btnText="Login"
+              background={'secondary'}
+              // press={() => navigation.navigate('Login')}
+            />
           </VStack>
           <Text fontSize="xs" mt={5}>
             By logging in or registering,you have agreed to the
