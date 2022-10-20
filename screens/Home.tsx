@@ -1,10 +1,18 @@
 import React from 'react';
-import {Text, Button, Image, Stack, Row, ScrollView, Column} from 'native-base';
+import {
+  Text,
+  Button,
+  Image,
+  Stack,
+  Row,
+  ScrollView,
+  Pressable,
+} from 'native-base';
 import HomeInput from '../Components/HomeInput';
 import Images from '../Components/Images';
 import Todays from '../Components/Todays';
-import HomePress from '../Components/HomePress';
-const Home = () => {
+import {HomePress, BookingResturant} from '../Components/HomePress';
+const Home = ({navigation}) => {
   const IMAGES = [
     {imgelink: require('../assests/banner.png')},
     {imgelink: require('../assests/banner.png')},
@@ -55,8 +63,12 @@ const Home = () => {
 
   return (
     <ScrollView>
-      <Stack flex="1" justifyContent={'space-between'} m={3}>
-        <Row h={10} justifyContent={'space-between'} alignItems={'center'}>
+      <Stack flex="1" justifyContent={'space-between'} mx={3}>
+        <Row
+          h={20}
+          justifyContent={'space-between'}
+          alignItems={'center'}
+          bg={'white'}>
           <HomePress token={require('../assests/dash.png')} />
 
           <HomePress
@@ -82,32 +94,23 @@ const Home = () => {
           seeall=" See All "
           token={require('../assests/next.png')}
         />
-
-        <ScrollView showsHorizontalScrollIndicator={false}>
-          {NEWARIVAL.map(item => {
-            return (
-              <Row justifyContent={'space-between'} bg={'white'} padding={1}>
-                <Image borderTopRadius={10} source={item.today} />
-                <Column>
-                  <Text fontWeight={'bold'}>{item.name}</Text>
-                  <Text w={120}>
-                    <Image
-                      borderRadius={20}
-                      size={5}
-                      resizeMode="cover"
-                      source={item.location}
-                      alt="Dash Board Image"
-                    />
-                    {item.hottel}
-                  </Text>
-                </Column>
-                <Button w={20} h={10} mt={6}>
-                  BOOK
-                </Button>
-              </Row>
-            );
-          })}
-        </ScrollView>
+        <BookingResturant newarival={NEWARIVAL} btntxt="Book" />
+        <Row
+          shadow="2"
+          justifyContent={'space-evenly'}
+          h={'20'}
+          alignItems={'center'}
+          borderTopRadius={20}>
+          <Pressable onPress={() => navigation.navigate('Booking')}>
+            <Text>Home</Text>
+          </Pressable>
+          <Pressable onPress={() => navigation.navigate('Details')}>
+            <Text>Details</Text>
+          </Pressable>
+          <Pressable onPress={() => navigation.navigate('Details')}>
+            <Text>Profile</Text>
+          </Pressable>
+        </Row>
       </Stack>
     </ScrollView>
   );

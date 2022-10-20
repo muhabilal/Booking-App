@@ -7,17 +7,23 @@ const HomeInput = (props: any) => {
   const Value = props.inputValue;
   const setValue = props.setInputValue;
   return (
-    <Box>
+    <Box
+      h={20}
+      bg={'white'}
+      mt={5}
+      alignItems={'center'}
+      justifyContent={'center'}>
       <Image
         h={10}
         w={10}
         resizeMode="cover"
         position={'absolute'}
         left={2}
-        top={6}
+        top={8}
         source={require('../assests/search.png')}
         alt="jello"
       />
+
       <Stack alignItems={'center'}>
         <Text>{Name}</Text>
 

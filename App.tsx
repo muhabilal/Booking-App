@@ -9,12 +9,23 @@ import {NativeBaseProvider, Stack} from 'native-base';
 import Theme from './Themes/Theme';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Booking from './screens/Booking';
 import Index from './Index';
+import Details from './screens/Details';
 const App = () => {
   const Stack = createNativeStackNavigator();
   return (
     <NativeBaseProvider theme={Theme}>
-      <Index />
+      <NavigationContainer>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+          }}>
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Details" component={Details} />
+          <Stack.Screen name="Booking" component={Booking} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </NativeBaseProvider>
   );
 };
