@@ -36,13 +36,13 @@ export default function Details({navigation}) {
   return (
     <ScrollView>
       <Stack alignItems={'center'}>
+        <BookingHistory bantxt="Details Resturant" />
         <HomePress
           newse="Todays New Arivable"
           foodlist="Best Of the today Food list Update"
           seeall=" See All "
           token={require('../assests/next.png')}
         />
-        <BookingHistory bantxt="Details Resturant" />
 
         <Text></Text>
         <Box w={'90%'}>

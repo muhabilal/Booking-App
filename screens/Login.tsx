@@ -31,7 +31,11 @@ const Login = ({navigation}) => {
         />
       </Row>
       <VStack mt={7} space={3} alignItems="center">
-        <ButtonCmp btnText="Login" background="light.100" />
+        <ButtonCmp
+          btnText="Login"
+          background="light.100"
+          press={() => navigation.navigate('Home')}
+        />
         <Divider w={'40%'} />
         <ButtonCmp btnText="Sign Up with Google" background="light.100" />
       </VStack>

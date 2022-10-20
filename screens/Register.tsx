@@ -29,11 +29,11 @@ const Register = ({navigation}) => {
         <Row w="80%" justifyContent={'space-between'}>
           <Press
             txt="Create Account"
-            click={() => navigation.navigate('CreateAccount')}
+            // click={() => navigation.navigate('CreateAccount')}
           />
-          <Press txt="Login" click={() => navigation.navigate('Tab')} />
+          <Press txt="Login" click={() => navigation.navigate('Login')} />
         </Row>
-        {/* <CreateAccount /> */}
+        <CreateAccount />
         {/* <Login /> */}
       </Stack>
     </Stack>
