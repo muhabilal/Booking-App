@@ -5,36 +5,38 @@ import Press from '../Components/Press';
 import CreateAccount from './CreateAccount';
 import Login from './Login';
 
-const Register = () => {
+const Register = ({navigation}) => {
   const [isTrue, setIsTrue] = useState(true);
   return (
-    <>
-      <Stack flex={1} bg={'#D9D9D9'}>
-        <Stack h={350}>
-          <Center mt={20}>
-            <Image
-              source={require('../assests/Order.png')}
-              alt="Alternate Text"
-            />
-          </Center>
-        </Stack>
-        <Stack
-          bottom={0}
-          h={535}
-          w={'100%'}
-          flex={0.5}
-          position={'absolute'}
-          bg="white"
-          borderTopRadius={30}>
-          <Row mt={10}>
-            <Press txt="Create Account" padding_left={12} padding_right={10} />
-            <Press txt="Login" />
-          </Row>
-          {/* <CreateAccount /> */}
-          <Login />
-        </Stack>
+    <Stack flex={1} bg={'light.50'}>
+      <Stack h={350}>
+        <Center mt={20}>
+          <Image
+            source={require('../assests/Order.png')}
+            alt="Alternate Text"
+          />
+        </Center>
       </Stack>
-    </>
+      <Stack
+        bottom={0}
+        h={535}
+        w={'100%'}
+        flex={0.5}
+        position={'absolute'}
+        bg="white"
+        borderTopRadius={30}
+        p={5}>
+        <Row w="80%" justifyContent={'space-between'}>
+          <Press
+            txt="Create Account"
+            click={() => navigation.navigate('CreateAccount')}
+          />
+          <Press txt="Login" click={() => navigation.navigate('Tab')} />
+        </Row>
+        {/* <CreateAccount /> */}
+        {/* <Login /> */}
+      </Stack>
+    </Stack>
   );
 };
 

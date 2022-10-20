@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import InputsCmp from '../Components/InputsCmp';
-import {Stack} from 'native-base';
+import {Divider, Stack, VStack} from 'native-base';
+import ButtonCmp from '../Components/ButtonCmp';
 const CreateAccount = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -26,6 +27,11 @@ const CreateAccount = () => {
         setInputValue={setPassword}
         hide={true}
       />
+      <VStack space={3} alignItems="center">
+        <ButtonCmp btnText="Registration" background="light.100" />
+        <Divider w={'40%'} />
+        <ButtonCmp btnText="Sign Up with Google" background="light.100" />
+      </VStack>
     </Stack>
   );
 };
