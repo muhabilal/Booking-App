@@ -4,7 +4,6 @@ import Theme from './Themes/Theme';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import Booking from './screens/Booking';
-import Index from './Index';
 import Home from './screens/Home';
 import First from './screens/Splash';
 import Register from './screens/Register';
