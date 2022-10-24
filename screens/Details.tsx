@@ -3,15 +3,14 @@ import {
   ScrollView,
   Stack,
   Box,
-  Button,
   Image,
   Row,
   Pressable,
   Text,
+  Column,
 } from 'native-base';
-import {HomePress} from '../Components/HomePress';
 import {BookingHistory, BookingResturant} from '../Components/HomePress';
-import Images from '../Components/Images';
+import Booking from './Booking';
 export default function Details({navigation}) {
   const NEWARIVAL = [
     {
@@ -35,14 +34,32 @@ export default function Details({navigation}) {
   ];
   return (
     <ScrollView>
-      <Stack alignItems={'center'}>
+      <Stack alignItems={'center'} flex="1" justifyContent={'space-between'}>
         <BookingHistory bantxt="Details Resturant" />
-        <HomePress
-          newse="Todays New Arivable"
-          foodlist="Best Of the today Food list Update"
-          seeall=" See All "
-          token={require('../assests/next.png')}
-        />
+        <Column
+          w={'90%'}
+          shadow="1"
+          bg={'#FFFFFF'}
+          borderRadius={10}
+          justifyContent={'space-between'}
+          padding={1}>
+          <Text fontWeight={'bold'}>Tava Resturant</Text>
+          <Text>
+            <Image
+              borderRadius={20}
+              size={5}
+              resizeMode="cover"
+              source={require('../assests/location.webp')}
+              alt="Dash Board Image"
+            />
+            kazi Dairy , Taiger Pass ,Chittagong
+          </Text>
+          <Image
+            my={2}
+            borderRadius={10}
+            source={require('../assests/detail.png')}
+          />
+        </Column>
 
         <Text></Text>
         <Box w={'90%'}>
@@ -55,7 +72,7 @@ export default function Details({navigation}) {
           bg={'primary'}
           alignItems={'center'}
           borderRadius={10}>
-          <Pressable onPress={() => navigation.navigate('Details')}>
+          <Pressable onPress={() => navigation.navigate('Booking')}>
             <Text color={'white'}>Booking</Text>
           </Pressable>
         </Row>

@@ -15,7 +15,6 @@ export function HomePress(props: any) {
   const news = props.newse;
   const list = props.foodlist;
   const all = props.seeall;
-  console.log('sdfa', all);
 
   return (
     <Row
@@ -31,7 +30,7 @@ export function HomePress(props: any) {
       <Text>{all}</Text>
       <Pressable onPress={() => console.log("I'm Pressed")}>
         <Image
-          size={5}
+          size={6}
           resizeMode="cover"
           source={cmp}
           alt="Dash Board Image"
@@ -46,9 +45,11 @@ export const BookingHistory = (props: any) => {
   const txt = props.bantxt;
   return (
     <Box
-      h={20}
+      h={16}
       w={'100%'}
+      mb={2}
       bg={'primary'}
+      borderTopRadius={50}
       borderBottomRadius={30}
       alignItems={'center'}
       justifyContent={'center'}>

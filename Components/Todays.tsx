@@ -27,7 +27,7 @@ export default function Todays(props: any) {
               | undefined;
           }) => {
             return (
-              <Column bg={'white'} ml={1}>
+              <Column bg={'white'} mr={1} borderRadius={10}>
                 <Image borderTopRadius={10} source={item.today} />
                 <Text fontWeight={'bold'}>{item.name}</Text>
                 <Text w={120}>

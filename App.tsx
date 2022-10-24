@@ -11,6 +11,7 @@ import ForgetPassword from './screens/ForgetPassword';
 import Details from './screens/Details';
 import Login from './screens/Login';
 import CreateAccount from './screens/CreateAccount';
+import TabScreen from './screens/Tabsscreen';
 const App = () => {
   const Stack = createNativeStackNavigator();
   return (
@@ -20,6 +21,8 @@ const App = () => {
           screenOptions={{
             headerShown: false,
           }}>
+          {/* <Stack.Screen name="Footer" component={Footer} /> */}
+          <Stack.Screen name="Tabsscreen" component={TabScreen} />
           <Stack.Screen name="First" component={First} />
           <Stack.Screen name="Register" component={Register} />
           <Stack.Screen name="CreateAccount" component={CreateAccount} />

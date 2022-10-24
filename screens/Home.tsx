@@ -1,18 +1,14 @@
 import React from 'react';
-import {
-  Text,
-  Button,
-  Image,
-  Stack,
-  Row,
-  ScrollView,
-  Pressable,
-} from 'native-base';
+import {Stack, Row, ScrollView} from 'native-base';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeInput from '../Components/HomeInput';
 import Images from '../Components/Images';
 import Todays from '../Components/Todays';
 import {HomePress, BookingResturant} from '../Components/HomePress';
-const Home = ({navigation}) => {
+
+const Home = () => {
+  const Tab = createBottomTabNavigator();
+
   const IMAGES = [
     {imgelink: require('../assests/banner.png')},
     {imgelink: require('../assests/banner.png')},
@@ -65,10 +61,11 @@ const Home = ({navigation}) => {
     <ScrollView>
       <Stack flex="1" justifyContent={'space-between'} mx={3}>
         <Row
-          h={20}
+          h={12}
+          bg={'white'}
+          mb={2}
           justifyContent={'space-between'}
-          alignItems={'center'}
-          bg={'white'}>
+          alignItems={'center'}>
           <HomePress token={require('../assests/dash.png')} />
 
           <HomePress
@@ -95,22 +92,6 @@ const Home = ({navigation}) => {
           token={require('../assests/next.png')}
         />
         <BookingResturant newarival={NEWARIVAL} btntxt="Book" />
-        <Row
-          shadow="2"
-          justifyContent={'space-evenly'}
-          h={'20'}
-          alignItems={'center'}
-          borderTopRadius={20}>
-          <Pressable onPress={() => navigation.navigate('Booking')}>
-            <Text>Home</Text>
-          </Pressable>
-          <Pressable onPress={() => navigation.navigate('Details')}>
-            <Text>Details</Text>
-          </Pressable>
-          <Pressable onPress={() => navigation.navigate('Details')}>
-            <Text>Profile</Text>
-          </Pressable>
-        </Row>
       </Stack>
     </ScrollView>
   );
