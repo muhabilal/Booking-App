@@ -1,14 +1,12 @@
 import {Stack, Center, Image, Row, NativeBaseProvider} from 'native-base';
 import React, {useState} from 'react';
+import CreateAccount from '../Components/CreateAccount';
 import InputsCmp from '../Components/InputsCmp';
 import Press from '../Components/Press';
-import CreateAccount from './CreateAccount';
-import Login from './Login';
-
 const Register = ({navigation}) => {
-  const [isTrue, setIsTrue] = useState(true);
+  const [isTrue, setIsTrue] = useState(false);
   return (
-    <Stack flex={1} bg={'light.50'}>
+    <Stack h={'100%'} bg={'light.50'}>
       <Stack h={350}>
         <Center mt={20}>
           <Image
@@ -19,9 +17,8 @@ const Register = ({navigation}) => {
       </Stack>
       <Stack
         bottom={0}
-        h={535}
+        top={'1/4'}
         w={'100%'}
-        flex={0.5}
         position={'absolute'}
         bg="white"
         borderTopRadius={30}
@@ -31,10 +28,12 @@ const Register = ({navigation}) => {
             txt="Create Account"
             // click={() => navigation.navigate('CreateAccount')}
           />
-          <Press txt="Login" click={() => navigation.navigate('Login')} />
+          <Press
+            txt="Login"
+            // click={() => navigation.navigate('Login')}
+          />
         </Row>
         <CreateAccount />
-        {/* <Login /> */}
       </Stack>
     </Stack>
   );
