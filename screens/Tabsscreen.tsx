@@ -4,6 +4,7 @@ import Home from './Home';
 import Details from './Details';
 import Booking from './Booking';
 import Profile from './Profile';
+import {Image} from 'native-base';
 // import {Entypo} from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
@@ -17,16 +18,45 @@ function MyTabs() {
       <Tab.Screen
         name="Feed"
         component={Home}
-        // options={{
-        //   tabBarLabel: 'Home',
-        //   tabBarIcon: ({color, size}) => (
-        //     // <Entypo name="home" size={size} color={color} />
-        //   ),
-        // }}
+        options={{
+          tabBarLabel: 'Home',
+          tabBarIcon: ({color, size}) => (
+            <Image
+              size={size}
+              color={color}
+              source={require('../assests/home.png')}
+            />
+          ),
+        }}
       />
-      {/* <Tab.Screen name="Home" component={Home} /> */}
-      <Tab.Screen name="Booking" component={Booking} />
-      <Tab.Screen name="Profile" component={Profile} />
+      <Tab.Screen
+        name="Booking"
+        component={Booking}
+        options={{
+          tabBarLabel: 'Home',
+          tabBarIcon: ({color, size}) => (
+            <Image
+              size={size}
+              color={color}
+              source={require('../assests/booking.png')}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          tabBarLabel: 'Home',
+          tabBarIcon: ({color, size}) => (
+            <Image
+              size={size}
+              color={color}
+              source={require('../assests/profile.png')}
+            />
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 }

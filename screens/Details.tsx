@@ -69,7 +69,7 @@ export default function Details({navigation}) {
           justifyContent={'space-evenly'}
           w={'50%'}
           h={'10'}
-          bg={'primary'}
+          bg={'primary.10'}
           alignItems={'center'}
           borderRadius={10}>
           <Pressable onPress={() => navigation.navigate('Booking')}>

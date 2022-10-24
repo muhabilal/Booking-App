@@ -15,22 +15,24 @@ export function HomePress(props: any) {
   const news = props.newse;
   const list = props.foodlist;
   const all = props.seeall;
+  const next = props.navigation;
+  const siz = props.size;
 
   return (
     <Row
-      justifyContent={'space-between'}
       my={3}
       alignItems={'center'}
       bg={'white'}
-      borderRadius={5}>
-      <Column>
+      borderRadius={5}
+      justifyContent={'space-between'}>
+      <Column justifyContent={'space-between'}>
         <Text style={{fontWeight: 'bold'}}>{news}</Text>
         <Text>{list}</Text>
       </Column>
       <Text>{all}</Text>
-      <Pressable onPress={() => console.log("I'm Pressed")}>
+      <Pressable onPress={next}>
         <Image
-          size={6}
+          size={siz}
           resizeMode="cover"
           source={cmp}
           alt="Dash Board Image"
@@ -48,7 +50,7 @@ export const BookingHistory = (props: any) => {
       h={16}
       w={'100%'}
       mb={2}
-      bg={'primary'}
+      bg={'primary.10'}
       borderTopRadius={50}
       borderBottomRadius={30}
       alignItems={'center'}
@@ -63,7 +65,7 @@ export const BookingHistory = (props: any) => {
 export const BookingResturant = (props: any) => {
   const NEWARIVAL = props.newarival;
   const txt = props.btntxt;
-
+  const next = props.navigation;
   return (
     <ScrollView showsHorizontalScrollIndicator={false}>
       {NEWARIVAL.map(item => {
@@ -93,9 +95,9 @@ export const BookingResturant = (props: any) => {
               w={20}
               h={10}
               mt={6}
-              bg={'primary'}
+              bg={'primary.10'}
               borderRadius={10}
-              onPress={() => console.log('helli')}>
+              onPress={next}>
               {txt}
             </Button>
           </Row>

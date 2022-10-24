@@ -2,7 +2,6 @@ import {Input, Stack, Text, Image, Box} from 'native-base';
 import React from 'react';
 
 const HomeInput = (props: any) => {
-  const Name = props.name;
   const secure = props.hide;
   const Value = props.inputValue;
   const setValue = props.setInputValue;

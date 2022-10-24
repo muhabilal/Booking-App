@@ -1,7 +1,6 @@
 import React from 'react';
-import {ScrollView, Stack, Box, Text, Row, Pressable} from 'native-base';
+import {ScrollView, Stack, Box, Text, Row, Pressable, Image} from 'native-base';
 import {BookingHistory, BookingResturant} from '../Components/HomePress';
-import Images from '../Components/Images';
 export default function Booking({navigation}) {
   const NEWARIVAL = [
     {
@@ -39,7 +38,9 @@ export default function Booking({navigation}) {
           alignItems={'center'}
           borderRadius={10}>
           <Pressable onPress={() => navigation.navigate('Details')}>
-            <Text color={'#6B7280'}>Booking more</Text>
+            <Text color={'#6B7280'}>
+              <Image source={require('../assests/plus.png')} /> Booking more
+            </Text>
           </Pressable>
         </Row>
       </Stack>

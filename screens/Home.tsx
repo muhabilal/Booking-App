@@ -6,7 +6,7 @@ import Images from '../Components/Images';
 import Todays from '../Components/Todays';
 import {HomePress, BookingResturant} from '../Components/HomePress';
 
-const Home = () => {
+const Home = ({navigation}) => {
   const Tab = createBottomTabNavigator();
 
   const IMAGES = [
@@ -66,9 +66,10 @@ const Home = () => {
           mb={2}
           justifyContent={'space-between'}
           alignItems={'center'}>
-          <HomePress token={require('../assests/dash.png')} />
+          <HomePress size={6} token={require('../assests/dash.png')} />
 
           <HomePress
+            size={6}
             token={require('../assests/location.webp')}
             wriiten=" Agerabad 435, Chittagong"
           />
@@ -82,6 +83,9 @@ const Home = () => {
           foodlist="Best Of the today Food list Update"
           seeall=" See All "
           token={require('../assests/next.png')}
+          navigation={() => {
+            navigation.navigate('Details');
+          }}
         />
         <Todays todayimages={TODAYSIMAGE} />
 
@@ -90,8 +94,17 @@ const Home = () => {
           foodlist="Best Of the today Food list Update"
           seeall=" See All "
           token={require('../assests/next.png')}
+          navigation={() => {
+            navigation.navigate('Details');
+          }}
         />
-        <BookingResturant newarival={NEWARIVAL} btntxt="Book" />
+        <BookingResturant
+          navigation={() => {
+            navigation.navigate('Booking');
+          }}
+          newarival={NEWARIVAL}
+          btntxt="Book"
+        />
       </Stack>
     </ScrollView>
   );
