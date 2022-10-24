@@ -6,10 +6,9 @@ const Press = (props: any) => {
   const onclick = props.click;
   return (
     <Button
-      // alignSelf={'flex-end'}
       size="lg"
       variant="link"
-      _text={{color: 'primary'}}
+      _text={{color: 'primary.10'}}
       onPress={onclick}>
       {text}
     </Button>

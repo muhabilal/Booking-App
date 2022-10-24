@@ -15,16 +15,15 @@ const ButtonCmp = (props: any) => {
       <Text
         textAlign={'center'}
         color={
-          bg_color == 'primary'
+          bg_color == 'primary.10'
             ? 'singletons'
             : bg_color == 'light.100'
             ? 'black'
-            : 'primary'
+            : 'primary.10'
         }>
         {text}
       </Text>
     </Pressable>
-    // </Box>
   );
 };
 

@@ -17,7 +17,7 @@ const InputsCmp = (props: any) => {
         w={'100%'}
         placeholder={P_holder}
         borderRadius={10}
-        type={secure}
+        secureTextEntry={secure}
         value={Value}
         onChangeText={setValue}
       />
